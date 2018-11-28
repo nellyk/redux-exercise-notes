@@ -42,3 +42,18 @@ body {
   font-weight: 700;
   font-style: italic;
 }
+button{
+  background-color: #5046c3;
+  margin: 10px;
+  height: 30px;
+  display: inline-block;
+  border-color: #5046c3;
+  border-radius: 12px 12px 12px 12px;
+  color: white;
+  font-size: 1em;
+  grid-row: 1;
+  width: 80px;
+}
+.button-container{
+ display: grid;
+}
