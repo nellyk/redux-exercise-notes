@@ -19,3 +19,4 @@ jobs:
           body: 'This is an auto-generated pull request for Dependabot changes. Please review this PR and merge it. Please close this PR to stop updating dependencies.'
           labels: dependabot
           branch: dependabot-changes
+          base: main
