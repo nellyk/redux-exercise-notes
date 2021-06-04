@@ -4,18 +4,16 @@ on:
     branches: 
       - main
 jobs:
-  one-app-release-pull-request:
+  automated-dependabot-pull-request:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Create release pull request
+      - name: Create Dependabot pull request
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.PA_TOKEN }}
-          commit-message: One App Prepare Release
-          author: 'OneAmexBot <one.amex@aexp.com>'
-          title: 'One App Prepare Release'
-          body: 'This is an auto-generated pull request for One App release changes. Please review this PR and merge it for a release to be initiated. Please close this PR to stop a release from being initiated.'
-          labels: release,automated pr,skip-release-drafter
+          commit-message: Dependabot pull request
+          title: 'Dependabot pull request'
+          body: 'This is an auto-generated pull request for Dependabot changes. Please review this PR and merge it. Please close this PR to stop updating dependencies.'
+          labels: dependabot
           branch: dependabot-changes
-          base: main
