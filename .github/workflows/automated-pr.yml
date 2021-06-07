@@ -9,12 +9,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: dependabot-changes
-      - name: Reset promotion branch
-        run: |
-          git fetch origin main:main
-          git reset --hard main
+          ref: main
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          branch: dependabot-merged-changes
+          branch: dependabot-changes
