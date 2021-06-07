@@ -10,10 +10,6 @@ jobs:
       - uses: actions/checkout@v2
         with:
           ref: dependabot-changes
-      - name: Reset promotion branch
-        run: |
-          git fetch origin dependabot-changes:dependabot-changes
-          git reset --hard dependabot-changes
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
