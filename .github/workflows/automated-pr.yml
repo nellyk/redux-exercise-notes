@@ -12,10 +12,9 @@ jobs:
           ref: dependabot-changes
       - name: Reset promotion branch
         run: |
-          git fetch origin dependabot-changes-production:dependabot-changes-production
-          git reset --hard dependabot-changes-production
+          git fetch origin main:main
+          git reset --hard main
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          branch: dependabot-changes-production
-          base: main
+          branch: production-promotion
