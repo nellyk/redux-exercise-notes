@@ -9,8 +9,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          ref: main
+          ref: dependabot-changes
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
-          branch: dependabot-changes
+          branch: dependabot-changes-production
+          base: main
